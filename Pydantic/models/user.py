@@ -14,3 +14,6 @@ def validate_account_id(cls, value):
 
 user = User(name = 'Ali', email = 'ali', account_id = -12)
 print(user)
+
+user_json_str = user.model_dump_json()
+print(user_json_str)
