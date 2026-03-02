@@ -27,13 +27,6 @@ TP-Pydantic-Requests-FastAPI-et-Streamlit/
 - Python 3.8+
 - See individual TP folders for specific dependencies
 
-## 📖 Course Documentation
-
-- [Pydantic Documentation](https://docs.teknolabs.net/courses/advanced-python/1-pydantic/)
-- [Requests Documentation](https://docs.teknolabs.net/courses/advanced-python/2-requests/)
-- [FastAPI Documentation](https://docs.teknolabs.net/courses/advanced-python/3-fastapi/)
-- [Streamlit Documentation](https://docs.teknolabs.net/courses/advanced-python/4-streamlit/)
-
 ## 📝 Author
 
 **Zidi Abderrahmen DSI 22**  
