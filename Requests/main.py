@@ -1,6 +1,5 @@
 import requests
 
-url = "https://www.example.com"
-response = requests.get(url)
+response = requests.get("https://www.example.com")
 
-print(response.status_code)
+print(response.content)
