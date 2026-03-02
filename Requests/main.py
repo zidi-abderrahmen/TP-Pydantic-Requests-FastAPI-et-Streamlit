@@ -1,5 +1,9 @@
 import requests
 
-response = requests.get("https://www.example.com")
+data = {
+    "name": "Salah",
+    "message": "Hello!"
+}
+url = "https://httpbin.org/post"
 
-print(response.content)
+response = requests.post(url, json=data)
