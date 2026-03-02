@@ -18,3 +18,7 @@ def get_item(item_id: int) -> None:
         return items[item_id]
     else:
         raise HTTPException(status_code=404, detail=f"Item {item_id} not found")
+
+@app.get("/items/")
+def list_items(limit: int = 10):
+    return items[0:limit]
