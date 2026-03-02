@@ -1,11 +1,8 @@
 import requests
+from bs4 import BeautifulSoup
 
-auth_token = "XXXXXXXX"
+url = "https://www.example.com"
 
-header = {
-    "Authorization": f"Bearer {auth_token}"
-}
+response = requests.get(url)
 
-url = "https://httpbin.org/headers"
-response = requests.get(url, headers=header)
-print(response.json())
+soup = BeautifulSoup(response.content, "html.parser")
