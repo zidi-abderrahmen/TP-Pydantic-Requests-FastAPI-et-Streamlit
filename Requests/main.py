@@ -1,13 +1,6 @@
 import requests
 
-data = {
-    "name": "Salah",
-    "message": "Hello!"
-}
-url = "https://httpbin.org/post"
+response = requests.get("https://httpbin.org/status/404")
 
-response = requests.post(url, json=data)
-
-response_data = response.json()
-
-print(response_data)
+if response.status_code != 200:
+    print(f"HTTP Error: {response.status_code}")
