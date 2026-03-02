@@ -1,14 +1,11 @@
-import requests
-from bs4 import BeautifulSoup
+import urllib.request
+import urllib.parse
 
-url = "https://www.example.com"
+data = urllib.parse.urlencode({"key": "value"}).encode("utf-8")
 
-response = requests.get(url)
+req = urllib.request.Request("https://www.example.com", data=data, method="post")
 
-soup = BeautifulSoup(response.content, "html.parser")
+with urllib.request.urlopen(req) as response:
+    html = response.read().decode("utf-8")
 
-title = soup.title.text
-content = soup.find("p").text
-links = [a["href"] for a in soup.find_all("a")]
-
-print(title, content, links)
+print(html)
