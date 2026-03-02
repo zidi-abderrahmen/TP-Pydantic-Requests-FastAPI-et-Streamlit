@@ -7,7 +7,12 @@ items = []
 def root():
     return {"Hello": "World"}
 
-@app.get("/items")
+@app.get("items")
 def create_item(item: str):
     items.append(item)
+    return item
+
+@app.get("items/{item_id}")
+def get_item(item_id: int) -> str:
+    item = items[item_id]
     return item
