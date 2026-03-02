@@ -1,8 +1,11 @@
 import requests
 
-url = requests.get("https://httpbin.org/delay/10")
+auth_token = "XXXXXXXX"
 
-try:
-    response = requests.get(url.text, timeout=5)
-except requests.exceptions.Timeout as err:
-    print(err)
+header = {
+    "Authorization": f"Bearer {auth_token}"
+}
+
+url = "https://httpbin.org/headers"
+response = requests.get(url, headers=header)
+print(response.json())
