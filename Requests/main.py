@@ -1,6 +1,8 @@
 import requests
 
-response = requests.get("https://httpbin.org/status/404")
+url = requests.get("https://httpbin.org/delay/10")
 
-if response.status_code != 200:
-    print(f"HTTP Error: {response.status_code}")
+try:
+    response = requests.get(url.text, timeout=5)
+except requests.exceptions.Timeout as err:
+    print(err)
